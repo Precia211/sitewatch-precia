@@ -195,11 +195,11 @@ export default async function Home() {
                 </h3>
 
                 <p className="mt-2">
-                  Site: <strong>{alert.sites?.name}</strong>
+                  Site: <strong>{alert.sites?.[0]?.name}</strong>
                 </p>
 
                 <p>
-                  Location: {alert.sites?.location}
+                  Location: {alert.sites?.[0]?.location}
                 </p>
 
                 <p className="mt-2 text-gray-600">
