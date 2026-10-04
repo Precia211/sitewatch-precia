@@ -83,20 +83,18 @@ export default async function Home() {
     </p>
 
     <div className="flex gap-4">
-    <a
-  href="/admin/sites"
-  className="rounded bg-black px-4 py-2 text-white"
+  <a
+  href="/admin/rules"
+  className="rounded bg-blue-600 px-4 py-2 text-white"
 >
-  Manage Sites
+  Manage Alert Rules
 </a>
-
-    <a
-  href="/admin/alerts"
-  className="rounded bg-gray-700 px-4 py-2 text-white"
+<a
+  href="/admin/rules"
+  className="rounded bg-blue-600 px-4 py-2 text-white"
 >
-  Manage Alerts
-</a>
-    </div>
+  Manage Alert Rules
+</a>    </div>
   </section>
 )}
 
