@@ -5,7 +5,7 @@ import {
   updateRule,
   deleteRule,
 } from "./actions";
-
+import CheckAlertsButton from "./CheckAlertsButton";
 export default async function ManageRules() {
   const supabase = await createClient();
 
@@ -40,6 +40,7 @@ export default async function ManageRules() {
         <p className="text-gray-600 mb-8">
           Create rules using a metric, threshold, and direction.
         </p>
+<CheckAlertsButton />
 
         <section className="bg-white rounded-lg shadow p-6 mb-8">
           <h2 className="text-xl font-semibold mb-4">
