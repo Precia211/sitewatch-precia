@@ -15,6 +15,20 @@ export async function POST() {
     );
   }
 
+  // Check that the logged-in user is an admin
+  const { data: profile, error: profileError } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .single();
+
+  if (profileError || profile?.role !== "admin") {
+    return NextResponse.json(
+      { error: "Forbidden: admin access required" },
+      { status: 403 }
+    );
+  }
+
   const { data: rules, error: rulesError } = await supabase
     .from("rules")
     .select("*")
